@@ -1,0 +1,47 @@
+<!--
+ * @LastEditTime: 2021-05-13 15:46:03
+ * @LastEditors: jinxiaojian
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吃什么</title>
+</head>
+
+<body>
+  <div>
+    <div id="app">
+      <h1>吃什么</h1>
+      <textarea placeholder="请输入" v-model="message"></textarea>
+      <div>
+        <button @click='getResult'>随机</button>
+      </div>
+      <h2>{{result}}</h2>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    window.onload = function () {
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: '',
+          result: ''
+        },
+        methods: {
+          getResult() {
+            let arr = this.message.split(/[,，\n\r\s]+/)
+            this.result = arr[Math.floor(Math.random() * arr.length)]
+          }
+        }
+      })
+    }
+  </script>
+
+</body>
+
+</html>
