@@ -1,0 +1,249 @@
+html,
+body,
+div,
+section {
+  padding: 0;
+  margin: 0;
+}
+
+#box {
+  overflow: hidden;
+  position: relative;
+  background: #111;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.cube {
+  display: block;
+  position: relative;
+  transform: rotateX(-33.5deg) rotateY(45deg);
+  transform-style: preserve-3d;
+}
+
+.cube__inner,
+.cube__outer {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cube__inner {
+  left: 0;
+  position: absolute;
+  top: -2px;
+}
+
+.cube__face {
+  border: 1px solid #fff;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.cube .cube__outer .cube__face {
+  background: rgba(141, 214, 249, 0.5);
+  transition: border-width 0.2s;
+  transition-delay: 0.2s;
+}
+
+.cube .cube__inner .cube__face {
+  background: #175d96;
+  border: 2px solid #fff;
+}
+
+.splash-viz__cube {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2b3a42;
+  font: 400 16px Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+[aria-hidden="true"]:hover .header-link {
+  visibility: visible;
+}
+
+a,
+button.as-link {
+  color: #1a6bac;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+a.icon-link,
+button.as-link.icon-link {
+  color: #909090;
+  display: inline-block;
+  font-size: 0.7em;
+  margin-left: 16px;
+  transform: rotate(-45deg);
+}
+
+a.icon-link:hover,
+button.as-link.icon-link:hover {
+  color: #1a6bac;
+}
+
+a:hover,
+button.as-link:hover {
+  color: #144f80;
+}
+
+::-moz-selection {
+  background: rgba(141, 214, 249, 0.35);
+}
+
+::selection {
+  background: rgba(141, 214, 249, 0.35);
+}
