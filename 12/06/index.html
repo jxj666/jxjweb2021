@@ -1,0 +1,58 @@
+<!--
+ * @LastEditTime: 2021-12-06 17:24:03
+ * @LastEditors: jinxiaojian
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文本替换器</title>
+  <style>
+    div,
+    textarea,
+    p {
+      display: block;
+      padding: 10px;
+      margin: 0 auto;
+      color: #333;
+    }
+
+    textarea {
+      padding: 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app'>
+    <div>
+      <textarea v-model="message" placeholder="复制"></textarea>
+      <p>{{ reMessage }}</p>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: '',
+        reMessage: ''
+      },
+      watch: {
+        message(val) {
+          this.reMessage = val.replace(/\[\d+?\]/g, `---------`).replace(/习近平/g, ``).split('').join('一')
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
